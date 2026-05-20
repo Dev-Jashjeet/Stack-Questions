@@ -42,7 +42,7 @@ int main(void) {
     void pushStack(int [], int);
     void popStack(int []);
     void displayStack(int []);
-    int stack[SIZE];
+    int stack[SIZE-1];
     int num;
     int another = 1;
     while(another == 1) {
