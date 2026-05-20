@@ -43,4 +43,4 @@ int main(void) {
     }
     displayStack(stack);
     return 0;
-}
+} 
