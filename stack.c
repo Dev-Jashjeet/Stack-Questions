@@ -1,4 +1,4 @@
-// PUSH or insertion of number and Display of Stack
+// POP or deletion of number and Display of Stack
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -7,7 +7,7 @@ int top = -1; // Global variable
 
 void pushStack(int stack[], int num) {
     if(top == SIZE-1) {
-        printf("Stack is full");
+        printf("Stack is full\n");
         return;
     }
     top++;
@@ -16,9 +16,19 @@ void pushStack(int stack[], int num) {
     return;
 }
 
+void popStack(int stack[]) {
+    if(top == -1) {
+        printf("Stack is empty as there is nothing to display\n");
+        return;
+    }
+    printf("The deleted element is %d\n", stack[top]);
+    top--;
+    return;
+}
+
 void displayStack(int stack[]) {
     if(top == -1) {
-        printf("Stack is empty");
+        printf("Stack is empty\n");
         return;
     }
     printf("Stack elements are");
@@ -30,6 +40,7 @@ void displayStack(int stack[]) {
 
 int main(void) {
     void pushStack(int [], int);
+    void popStack(int []);
     void displayStack(int []);
     int stack[SIZE];
     int num;
@@ -41,6 +52,7 @@ int main(void) {
         printf("YES/NO 1/0");
         scanf("%d", &another);
     }
+    popStack(stack);
     displayStack(stack);
     return 0;
 }
